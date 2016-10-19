@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scripts/TableOne.gd" type="Script" id=1]
 [ext_resource path="res://sprites/logo.png" type="Texture" id=2]
+
+[sub_resource type="Theme" id=1]
+
 
 [node name="Restaurant" type="Node2D"]
 
@@ -11,8 +14,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 675.0
-margin/top = 133.0
+theme/theme = SubResource( 1 )
+margin/left = 743.0
+margin/top = 220.0
 margin/right = 951.0
 margin/bottom = 408.0
 script/script = ExtResource( 1 )
@@ -23,10 +27,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 133.0
-margin/top = 69.0
-margin/right = 159.0
-margin/bottom = 92.0
+margin/left = 94.0
+margin/top = 31.0
+margin/right = 120.0
+margin/bottom = 54.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -39,10 +43,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 187.0
-margin/top = 109.0
-margin/right = 213.0
-margin/bottom = 132.0
+margin/left = 148.0
+margin/top = 71.0
+margin/right = 174.0
+margin/bottom = 94.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -55,10 +59,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 166.0
-margin/top = 156.0
-margin/right = 192.0
-margin/bottom = 179.0
+margin/left = 127.0
+margin/top = 118.0
+margin/right = 153.0
+margin/bottom = 141.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -71,10 +75,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 106.0
-margin/top = 156.0
-margin/right = 132.0
-margin/bottom = 179.0
+margin/left = 67.0
+margin/top = 118.0
+margin/right = 93.0
+margin/bottom = 141.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -87,10 +91,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 83.0
-margin/top = 109.0
-margin/right = 109.0
-margin/bottom = 132.0
+margin/left = 44.0
+margin/top = 71.0
+margin/right = 70.0
+margin/bottom = 94.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
