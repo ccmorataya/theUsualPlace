@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scripts/TableOne.gd" type="Script" id=1]
+[ext_resource path="res://sprites/logo.png" type="Texture" id=2]
 
 [node name="Restaurant" type="Node2D"]
 
@@ -95,5 +96,12 @@ enabled_focus_mode = 2
 shortcut = null
 flat = false
 align = 0
+
+[node name="Eating" type="Sprite" parent="TableOne"]
+
+visibility/visible = false
+transform/pos = Vector2( 143.066, 124.755 )
+transform/scale = Vector2( 0.162387, 0.162387 )
+texture = ExtResource( 2 )
 
 

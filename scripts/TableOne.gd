@@ -1,8 +1,6 @@
 
 extends Container
 
-var comer = false
-
 func _ready():
 	set_fixed_process(true)
 
@@ -13,10 +11,9 @@ func _fixed_process(delta):
 	var threeStatus = get_node("ChairThree")
 	var fourStatus = get_node("ChairFour")
 	var fiveStatus = get_node("ChairFive")
+	var eatSprite = get_node("Eating")
 	
 	if (oneStatus.is_pressed() && twoStatus.is_pressed() && threeStatus.is_pressed() && fourStatus.is_pressed() && fiveStatus.is_pressed() ):
-		comer = true
+		eatSprite.show()
 	elif (!oneStatus.is_pressed() && !twoStatus.is_pressed() && !threeStatus.is_pressed() && !fourStatus.is_pressed() && !fiveStatus.is_pressed() ):
-		comer = false
-	
-	print(comer)
+		eatSprite.hide()
