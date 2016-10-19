@@ -1,11 +1,10 @@
-
 extends Container
 
 func _ready():
-	set_fixed_process(true)
+	get_node("Eating/anim").play("anim")
+	set_process(true)
 
-
-func _fixed_process(delta):
+func _process(delta):
 	var oneStatus = get_node("ChairOne")
 	var twoStatus = get_node("ChairTwo")
 	var threeStatus = get_node("ChairThree")
