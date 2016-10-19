@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scripts/TableOne.gd" type="Script" id=1]
+
+[node name="Restaurant" type="Node2D"]
+
+[node name="TableOne" type="Container" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 675.0
+margin/top = 133.0
+margin/right = 951.0
+margin/bottom = 408.0
+script/script = ExtResource( 1 )
+
+[node name="ChairOne" type="CheckBox" parent="TableOne"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 133.0
+margin/top = 69.0
+margin/right = 159.0
+margin/bottom = 92.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="ChairTwo" type="CheckBox" parent="TableOne"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 187.0
+margin/top = 109.0
+margin/right = 213.0
+margin/bottom = 132.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="ChairThree" type="CheckBox" parent="TableOne"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 166.0
+margin/top = 156.0
+margin/right = 192.0
+margin/bottom = 179.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="ChairFour" type="CheckBox" parent="TableOne"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 106.0
+margin/top = 156.0
+margin/right = 132.0
+margin/bottom = 179.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="ChairFive" type="CheckBox" parent="TableOne"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 83.0
+margin/top = 109.0
+margin/right = 109.0
+margin/bottom = 132.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+
