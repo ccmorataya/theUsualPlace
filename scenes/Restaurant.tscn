@@ -11,7 +11,6 @@
 
 [node name="TableOne" type="Container" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -124,7 +123,6 @@ autoplay = "anim"
 
 [node name="TableOne1" type="Container" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -237,7 +235,6 @@ autoplay = "anim"
 
 [node name="TableOne2" type="Container" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
