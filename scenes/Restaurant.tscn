@@ -11,6 +11,7 @@
 
 [node name="TableOne" type="Container" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -121,8 +122,9 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "anim"
 
-[node name="TableOne1" type="Container" parent="."]
+[node name="TableTwo" type="Container" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -134,7 +136,7 @@ margin/right = 308.0
 margin/bottom = 199.0
 script/script = ExtResource( 1 )
 
-[node name="ChairOne" type="CheckBox" parent="TableOne1"]
+[node name="ChairOne" type="CheckBox" parent="TableTwo"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -150,7 +152,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairTwo" type="CheckBox" parent="TableOne1"]
+[node name="ChairTwo" type="CheckBox" parent="TableTwo"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -166,7 +168,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairThree" type="CheckBox" parent="TableOne1"]
+[node name="ChairThree" type="CheckBox" parent="TableTwo"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -182,7 +184,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairFour" type="CheckBox" parent="TableOne1"]
+[node name="ChairFour" type="CheckBox" parent="TableTwo"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -198,7 +200,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairFive" type="CheckBox" parent="TableOne1"]
+[node name="ChairFive" type="CheckBox" parent="TableTwo"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -214,7 +216,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="Eating" type="Sprite" parent="TableOne1"]
+[node name="Eating" type="Sprite" parent="TableTwo"]
 
 transform/pos = Vector2( 105.014, 89.081 )
 transform/scale = Vector2( 3, 3 )
@@ -222,7 +224,7 @@ texture = ExtResource( 2 )
 hframes = 2
 frame = 1
 
-[node name="anim" type="AnimationPlayer" parent="TableOne1/Eating"]
+[node name="anim" type="AnimationPlayer" parent="TableTwo/Eating"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
@@ -233,8 +235,9 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "anim"
 
-[node name="TableOne2" type="Container" parent="."]
+[node name="TableThree" type="Container" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -246,7 +249,7 @@ margin/right = 285.0
 margin/bottom = 381.0
 script/script = ExtResource( 1 )
 
-[node name="ChairOne" type="CheckBox" parent="TableOne2"]
+[node name="ChairOne" type="CheckBox" parent="TableThree"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -262,7 +265,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairTwo" type="CheckBox" parent="TableOne2"]
+[node name="ChairTwo" type="CheckBox" parent="TableThree"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -278,7 +281,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairThree" type="CheckBox" parent="TableOne2"]
+[node name="ChairThree" type="CheckBox" parent="TableThree"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -294,7 +297,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairFour" type="CheckBox" parent="TableOne2"]
+[node name="ChairFour" type="CheckBox" parent="TableThree"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -310,7 +313,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="ChairFive" type="CheckBox" parent="TableOne2"]
+[node name="ChairFive" type="CheckBox" parent="TableThree"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -326,7 +329,7 @@ shortcut = null
 flat = false
 align = 0
 
-[node name="Eating" type="Sprite" parent="TableOne2"]
+[node name="Eating" type="Sprite" parent="TableThree"]
 
 transform/pos = Vector2( 105.014, 89.081 )
 transform/scale = Vector2( 3, 3 )
@@ -334,7 +337,7 @@ texture = ExtResource( 2 )
 hframes = 2
 frame = 1
 
-[node name="anim" type="AnimationPlayer" parent="TableOne2/Eating"]
+[node name="anim" type="AnimationPlayer" parent="TableThree/Eating"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
