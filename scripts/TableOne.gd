@@ -16,7 +16,7 @@ func _process(delta):
 	if (play):
 		if (!is_playing):
 			get_node("Eating/anim").play("anim")
-			get_node("Eating/SamplePlayer").play("game")
+			get_node("Eating/SamplePlayer").play("test")
 			is_playing = true
 	else:
 		get_node("Eating/anim").stop()
