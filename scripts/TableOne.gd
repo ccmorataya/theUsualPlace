@@ -12,14 +12,17 @@ func _process(delta):
 	var fourStatus = get_node("ChairFour")
 	var fiveStatus = get_node("ChairFive")
 	var eatSprite = get_node("Eating")
+	var player = get_node("Eating/SamplePlayer")
+	var voiceID = 0
 
 	if (play):
 		if (!is_playing):
 			get_node("Eating/anim").play("anim")
-			get_node("Eating/SamplePlayer").play("test")
+			voiceID = player.play("test")
 			is_playing = true
 	else:
 		get_node("Eating/anim").stop()
+		player.stop_all()
 
 	if (oneStatus.is_pressed() && twoStatus.is_pressed() && threeStatus.is_pressed() && fourStatus.is_pressed() && fiveStatus.is_pressed() ):
 		eatSprite.show()
