@@ -6,6 +6,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	var root = get_node(".")
 	var oneStatus = get_node("ChairOne")
 	var twoStatus = get_node("ChairTwo")
 	var threeStatus = get_node("ChairThree")
@@ -14,6 +15,7 @@ func _process(delta):
 	var eatSprite = get_node("Eating")
 	var player = get_node("Eating/SamplePlayer")
 	var voiceID = 0
+	var counter = -1
 
 	if (play):
 		if (!is_playing):
