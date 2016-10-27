@@ -4,17 +4,18 @@ var is_playing = false
 var status = [false, false, false, false, false]
 var count = 0
 var blocked = false
-var time = 6
+var time = 0
 var thread = Thread.new()
 
 func _ready():
-	thread.start( self, "print_text", ["Thread-1"] )#, 2 ) )
-	#thread.start( print_time, ("Thread-2", 4, ) )
+	#thread.start( self, "print_text", ["Thread-1"] )
 	var timer = get_node("Eating/eatingTime")
 	timer.connect("timeout", self, "print_time")
 	set_process(true)
 
 func _process(delta):
+	#print(time)
+	print(global.time)
 	var label = get_node("seconds")
 	var eatSprite = get_node("Eating")
 	var player = get_node("Eating/SamplePlayer")
@@ -39,27 +40,30 @@ func _process(delta):
 	if (status[0] && status[1] && status[2] && status[3] && status[4]):
 		eatSprite.show()
 		play = true
-	if (time <= 0):
-		timer.stop()
-		eatSprite.hide()
-		play = false
-		is_playing = false
-		table.set_frame(0)
-		time = 6
-		status[0] = false
-		status[1] = false
-		status[2] = false
-		status[3] = false
-		status[4] = false
-		blocked = false
-		count = 0
+#	if (time <= 0):
+#		timer.stop()
+#		eatSprite.hide()
+#		play = false
+#		is_playing = false
+#		table.set_frame(0)
+#		time = 6
+#		status[0] = false
+#		status[1] = false
+#		status[2] = false
+#		status[3] = false
+#		status[4] = false
+#		blocked = false
+#		count = 0
 
 func _input_event(event):
+	var menu = get_node("/root/Restaurant").get_node("PopupMenu")
+	var item = menu.get_node("Menu")
 	if (count < 5 && !blocked):
 		if (event.is_pressed()):
+			menu.popup()
+			set_pause_mode(1)
 			status[count] = true
 			count += 1
-			#print(count)
 	else:
 		blocked = true
 
