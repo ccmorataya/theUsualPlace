@@ -4,19 +4,26 @@ var is_playing = false
 var status = [false, false, false, false, false]
 var count = 0
 var blocked = false
+var time = 6
 var thread = Thread.new()
 
 func _ready():
-	thread.start( self, "print_text", ("Thread-1") )#, 2 ) )
+	thread.start( self, "print_text", ["Thread-1"] )#, 2 ) )
 	#thread.start( print_time, ("Thread-2", 4, ) )
+	var timer = get_node("Eating/eatingTime")
+	timer.connect("timeout", self, "print_time")
 	set_process(true)
 
 func _process(delta):
+	var label = get_node("seconds")
 	var eatSprite = get_node("Eating")
 	var player = get_node("Eating/SamplePlayer")
 	var table = get_node("nd_table/Table")
 	var voiceID = 0
+	var timer = get_node("Eating/eatingTime")
 	
+	label.set_text(str(time))
+
 	if (count > 0):
 		table.set_frame(count)
 	if (play):
@@ -24,36 +31,41 @@ func _process(delta):
 			get_node("Eating/anim").play("anim")
 			voiceID = player.play("test")
 			is_playing = true
+			timer.start()
 	else:
 		get_node("Eating/anim").stop()
 		player.stop_all()
-
+	
 	if (status[0] && status[1] && status[2] && status[3] && status[4]):
 		eatSprite.show()
 		play = true
-	elif (!status[0] && !status[1] && !status[2] && !status[3] && !status[4]):
+	if (time <= 0):
+		timer.stop()
 		eatSprite.hide()
 		play = false
 		is_playing = false
+		table.set_frame(0)
+		time = 6
+		status[0] = false
+		status[1] = false
+		status[2] = false
+		status[3] = false
+		status[4] = false
+		blocked = false
+		count = 0
 
 func _input_event(event):
 	if (count < 5 && !blocked):
 		if (event.is_pressed()):
 			status[count] = true
 			count += 1
-			print(count)
+			#print(count)
 	else:
 		blocked = true
-		#status[0-4] = false
-		#count = 0
-
-# Define a function for the thread
-func print_time( threadName):#, delay):
-   count = 0
-   while count < 5:
-      #time().sleep(delay)
-      count += 1
-      print("%s: %s" % threadName, time().ctime(time().time()) )
 
 func print_text( Arg1 ):
 	print(Arg1)
+
+func print_time():
+	time -= 1
+	print(time)
