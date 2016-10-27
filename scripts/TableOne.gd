@@ -22,7 +22,7 @@ func _process(delta):
 	var voiceID = 0
 	var timer = get_node("Eating/eatingTime")
 	
-	label.set_text(str(time))
+	label.set_text(str(time, " seconds remaining" ))
 
 	if (count > 0):
 		table.set_frame(count)
