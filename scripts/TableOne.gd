@@ -1,7 +1,6 @@
 extends Container
 var play = false
 var is_playing = false
-var status = [false, false, false, false, false]
 var count = 0
 var blocked = false
 var thread = Thread.new()
@@ -13,8 +12,6 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	#print(time)
-	#print(global.time)
 	var label = get_node("seconds")
 	var eatSprite = get_node("Eating")
 	var player = get_node("Eating/SamplePlayer")
@@ -36,21 +33,18 @@ func _process(delta):
 		get_node("Eating/anim").stop()
 		player.stop_all()
 	
-	if (status[0] && status[1] && status[2] && status[3] && status[4]):
-		eatSprite.show()
-		play = true
-	if (global.time <= 0):
+	if (global.status.size() > 4):
+		if (global.status[0] && global.status[1] && global.status[2] && global.status[3] && global.status[4]):
+			eatSprite.show()
+			play = true
+	if (global.time < 0):
 		timer.stop()
 		eatSprite.hide()
 		play = false
 		is_playing = false
 		table.set_frame(0)
 		global.time = 0
-		status[0] = false
-		status[1] = false
-		status[2] = false
-		status[3] = false
-		status[4] = false
+		global.status.clear()
 		blocked = false
 		count = 0
 
@@ -60,7 +54,6 @@ func _input_event(event):
 	if (count < 5 && !blocked):
 		if (event.is_pressed()):
 			global.menu.popup()
-			status[count] = true
 			count += 1
 	else:
 		blocked = true

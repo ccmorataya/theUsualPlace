@@ -17,3 +17,4 @@ func _input_event(event):
 		if (toggle):
 			global.time += 20
 			global.menu.hide()
+			global.status.append(true)

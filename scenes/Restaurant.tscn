@@ -45,6 +45,7 @@ max_lines_visible = -1
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
