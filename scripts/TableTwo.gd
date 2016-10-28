@@ -34,9 +34,10 @@ func _process(delta):
 		player.stop_all()
 	
 	if (global.statusT2.size() > 4):
-		if (global.statusT2[0] && global.statusT2[1] && global.statusT2[2] && global.statusT2[3] && global.statusT2[4]):
+		if (global.statusT2[0] && global.statusT2[1] && global.statusT2[2] && global.statusT2[3] && global.statusT2[4] && !global.eating):
 			eatSprite.show()
 			play = true
+			global.eating = true
 	if (global.timeT2 < 0):
 		timer.stop()
 		eatSprite.hide()
@@ -47,6 +48,7 @@ func _process(delta):
 		global.statusT2.clear()
 		blocked = false
 		count = 0
+		global.eating = false
 
 func _input_event(event):
 	#var menu = get_node("/root/Restaurant").get_node("PopupMenu")

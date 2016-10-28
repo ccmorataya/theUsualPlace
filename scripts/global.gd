@@ -1,6 +1,7 @@
 
 extends Node
 
+var eating = false
 var timeT1 = 0
 var timeT2 = 0
 var timeT3 = 0
