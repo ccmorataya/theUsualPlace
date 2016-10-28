@@ -11,3 +11,5 @@ onready var menuT3 = get_node("/root/Restaurant").get_node("PopupMenu2")
 var statusT1 = []
 var statusT2 = []
 var statusT3 = []
+
+var turn = 0
