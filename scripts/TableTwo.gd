@@ -19,7 +19,7 @@ func _process(delta):
 	var voiceID = 0
 	var timer = get_node("Eating/eatingTime")
 	
-	label.set_text(str(global.timeT1, " seconds remaining" ))
+	label.set_text(str(global.timeT2, " seconds remaining" ))
 
 	if (count > 0):
 		table.set_frame(count)
@@ -33,27 +33,27 @@ func _process(delta):
 		get_node("Eating/anim").stop()
 		player.stop_all()
 	
-	if (global.statusT1.size() > 4):
-		if (global.statusT1[0] && global.statusT1[1] && global.statusT1[2] && global.statusT1[3] && global.statusT1[4]):
+	if (global.statusT2.size() > 4):
+		if (global.statusT2[0] && global.statusT2[1] && global.statusT2[2] && global.statusT2[3] && global.statusT2[4]):
 			eatSprite.show()
 			play = true
-	if (global.timeT1 < 0):
+	if (global.timeT2 < 0):
 		timer.stop()
 		eatSprite.hide()
 		play = false
 		is_playing = false
 		table.set_frame(0)
-		global.timeT1 = 0
-		global.statusT1.clear()
+		global.timeT2 = 0
+		global.statusT2.clear()
 		blocked = false
 		count = 0
 
 func _input_event(event):
 	#var menu = get_node("/root/Restaurant").get_node("PopupMenu")
-	var item = global.menuT1.get_node("Menu")
+	var item = global.menuT2.get_node("Menu")
 	if (count < 5 && !blocked):
 		if (event.is_pressed()):
-			global.menuT1.popup()
+			global.menuT2.popup()
 			count += 1
 	else:
 		blocked = true
@@ -62,5 +62,5 @@ func print_text( Arg1 ):
 	print(Arg1)
 
 func print_time():
-	global.timeT1 -= 1
-	print(global.timeT1)
+	global.timeT2 -= 1
+	print(global.timeT2)

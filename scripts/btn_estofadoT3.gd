@@ -15,6 +15,6 @@ func _input_event(event):
 	if (self.is_pressed()):
 		toggle = true
 		if (toggle):
-			global.timeT1 += 20
-			global.menuT1.hide()
-			global.statusT1.append(true)
+			global.timeT3 += 40
+			global.menuT3.hide()
+			global.statusT3.append(true)
